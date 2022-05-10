@@ -37,48 +37,27 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         electronic_btn.setOnClickListener(this)
         motor_btn.setOnClickListener(this)
 
-
-
-       /* myListData = arrayOf<ListData>(
-            ListData("Email", R.drawable.ic_launcher_background),
-            ListData("Info", R.drawable.ic_launcher_background),
-            ListData("Delete", R.drawable.ic_launcher_background),
-            ListData("Dialer", R.drawable.ic_launcher_background),
-            ListData("Alert", R.drawable.ic_launcher_background),
-            ListData("Map", R.drawable.ic_launcher_background),
-            ListData("Email", R.drawable.ic_launcher_background),
-            ListData("Info", R.drawable.ic_launcher_background),
-            ListData("Delete", R.drawable.ic_launcher_background),
-            ListData("Dialer", R.drawable.ic_launcher_background),
-            ListData("Alert", R.drawable.ic_launcher_background),
-            ListData("Map", R.drawable.ic_launcher_background)
-        )
-*/
-
-
-      /*  adapter = RecyclerAdapter(myListData)*/
         recyclerView.setHasFixedSize(true)
         recyclerView.layoutManager = LinearLayoutManager(this,
         LinearLayoutManager.HORIZONTAL,true)
-       /* recyclerView.adapter = adapter*/
         defaultValues()
     }
 
 
     fun defaultValues(){
         myListData = arrayOf<ListData>(
-            ListData("Email", R.drawable.ic_launcher_background),
-            ListData("Info", R.drawable.ic_launcher_background),
-            ListData("Delete", R.drawable.ic_launcher_background),
-            ListData("Dialer", R.drawable.ic_launcher_background),
-            ListData("Alert", R.drawable.ic_launcher_background),
-            ListData("Map", R.drawable.ic_launcher_background),
-            ListData("Email", R.drawable.ic_launcher_background),
-            ListData("Info", R.drawable.ic_launcher_background),
-            ListData("Delete", R.drawable.ic_launcher_background),
-            ListData("Dialer", R.drawable.ic_launcher_background),
-            ListData("Alert", R.drawable.ic_launcher_background),
-            ListData("Map", R.drawable.ic_launcher_background)
+            ListData("Email", R.drawable.demo),
+            ListData("Info", R.drawable.demo),
+            ListData("Delete", R.drawable.demo),
+            ListData("Dialer", R.drawable.demo),
+            ListData("Alert", R.drawable.demo),
+            ListData("Map", R.drawable.demo),
+            ListData("Email", R.drawable.demo),
+            ListData("Info", R.drawable.demo),
+            ListData("Delete", R.drawable.demo),
+            ListData("Dialer", R.drawable.demo),
+            ListData("Alert", R.drawable.demo),
+            ListData("Map", R.drawable.demo)
         )
         adapter = RecyclerAdapter(myListData)
         recyclerView.adapter = adapter
@@ -88,8 +67,8 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         when (v?.id) {
             R.id.fashion_btn -> {
                 myListData = arrayOf<ListData>(
-                    ListData("Mens_Fashion", R.drawable.ic_launcher_background),
-                    ListData("Womens_Fashion", R.drawable.ic_launcher_background)
+                    ListData("Mens_Fashion", R.drawable.profile),
+                    ListData("Womens_Fashion", R.drawable.woman)
                 )
 
                 adapter = RecyclerAdapter(myListData)
@@ -98,8 +77,8 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
             }
             R.id.motor_btn -> {
                 myListData = arrayOf<ListData>(
-                    ListData("Cars", R.drawable.ic_launcher_background),
-                    ListData("Bikes", R.drawable.ic_launcher_background)
+                    ListData("Cars", R.drawable.car),
+                    ListData("Bikes", R.drawable.bike)
                 )
 
                 adapter = RecyclerAdapter(myListData)
@@ -108,8 +87,8 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
             }
             R.id.electronic_btn -> {
                 myListData = arrayOf<ListData>(
-                    ListData("Computer", R.drawable.ic_launcher_background),
-                    ListData("Phones", R.drawable.ic_launcher_background)
+                    ListData("Computer", R.drawable.desktop),
+                    ListData("Phones", R.drawable.smartphone)
                 )
 
                 adapter = RecyclerAdapter(myListData)
@@ -149,28 +128,28 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         if (value == ("Womens_Fashion")) {
             Log.d("checkings","run")
             myListData2 = arrayOf<ListData>(
-                ListData("women_cloth1", R.drawable.ic_launcher_background),
-                ListData("women_cloth2", R.drawable.ic_launcher_background),
-                ListData("women_cloth3", R.drawable.ic_launcher_background)
+                ListData("women_cloth1", R.drawable.woman),
+                ListData("women_cloth2", R.drawable.woman),
+                ListData("women_cloth3", R.drawable.woman)
             )
             adapter2 = RecyclerAdapterSubcategory(myListData2)
             recyclerView2.adapter = adapter2
         }
         else if( value.equals("Mens_Fashion")) {
             myListData2 = arrayOf<ListData>(
-                ListData("mens_clothes1", R.drawable.ic_launcher_background),
-                ListData("mens_clothes2", R.drawable.ic_launcher_background),
-                ListData("mens_clothes3", R.drawable.ic_launcher_background)
+                ListData("mens_clothes1", R.drawable.profile),
+                ListData("mens_clothes2", R.drawable.profile),
+                ListData("mens_clothes3", R.drawable.profile)
             )
             adapter2 = RecyclerAdapterSubcategory(myListData2)
             recyclerView2.adapter = adapter2
         }
         else if (value.equals("Phones")) {
             myListData2 = arrayOf<ListData>(
-                ListData("phone1", R.drawable.ic_launcher_background),
-                ListData("phone2", R.drawable.ic_launcher_background),
-                ListData("phone3", R.drawable.ic_launcher_background),
-                ListData("phone4", R.drawable.ic_launcher_background)
+                ListData("phone1", R.drawable.smartphone),
+                ListData("phone2", R.drawable.smartphone),
+                ListData("phone3", R.drawable.smartphone),
+                ListData("phone4", R.drawable.smartphone)
             )
             adapter2 = RecyclerAdapterSubcategory(myListData2)
             recyclerView2.adapter = adapter2
@@ -178,39 +157,33 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
 
         else if (value.equals("Computer")) {
             myListData2 = arrayOf<ListData>(
-                ListData("computer1", R.drawable.ic_launcher_background),
-                ListData("computer2", R.drawable.ic_launcher_background),
-                ListData("computer3", R.drawable.ic_launcher_background)
+                ListData("computer1", R.drawable.desktop),
+                ListData("computer2", R.drawable.desktop),
+                ListData("computer3", R.drawable.desktop)
             )
             adapter2 = RecyclerAdapterSubcategory(myListData2)
             recyclerView2.adapter = adapter2
         }
         else if(value.equals("Bikes")) {
             myListData2 = arrayOf<ListData>(
-                ListData("Bike1", R.drawable.ic_launcher_background),
-                ListData("Bike2", R.drawable.ic_launcher_background),
-                ListData("Bike3", R.drawable.ic_launcher_background)
+                ListData("Bike1", R.drawable.bike),
+                ListData("Bike2", R.drawable.bike),
+                ListData("Bike3", R.drawable.bike)
             )
             adapter2 = RecyclerAdapterSubcategory(myListData2)
             recyclerView2.adapter = adapter2
         }
         else if(value.equals("Cars")) {
             myListData2 = arrayOf<ListData>(
-                ListData("Car1", R.drawable.ic_launcher_background),
-                ListData("Car2", R.drawable.ic_launcher_background),
-                ListData("Car3", R.drawable.ic_launcher_background),
-                ListData("Car4", R.drawable.ic_launcher_background)
+                ListData("Car1", R.drawable.car),
+                ListData("Car2", R.drawable.car),
+                ListData("Car3", R.drawable.car),
+                ListData("Car4", R.drawable.car)
             )
             adapter2 = RecyclerAdapterSubcategory(myListData2)
             recyclerView2.adapter = adapter2
         }
-/*        else{
-            myListData2 = arrayOf<ListData>(
-                ListData("demo1", R.drawable.ic_launcher_background),
-                ListData("demo2", R.drawable.ic_launcher_background),
-                ListData("demo3", R.drawable.ic_launcher_background),
-                ListData("demo4", R.drawable.ic_launcher_background)
-            )*/
+
         }
 
 
